@@ -126,6 +126,11 @@ typedef struct __attribute__ ((packed)) {
 } knot_msg_data;
 
 typedef struct __attribute__ ((packed)) {
+	knot_msg_header		hdr;
+	uint8_t			sensor_id;
+} knot_msg_get_data;
+
+typedef struct __attribute__ ((packed)) {
 	uint8_t			event_flags;
 	uint16_t		time_sec;
 	knot_value_types	lower_limit;
